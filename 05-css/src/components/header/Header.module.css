@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    background-color: beige;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px;
+}
+.btn{
+    background-color: rgb(123, 6, 25);
+    width:fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.title{
+    color: #222222;
+    text-transform: uppercase;
+}
