@@ -1,16 +1,104 @@
-# React + Vite
+# Job Card Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React and Vite project that displays a responsive collection of job listing cards. Each card includes a company logo, company name, posting date, role, employment and experience tags, hourly pay, location, and action buttons.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Displays ten sample job listings from well-known companies.
+- Reusable `Card` component for rendering each listing.
+- Responsive wrapping layout with a dark background.
+- Company logos loaded from Google's favicon service.
+- Save and Apply Now controls, with a bookmark icon from `lucide-react`.
 
-## React Compiler
+> The Save and Apply Now buttons are currently presentational and do not have click handlers or persistence.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- Vite
+- JavaScript (JSX)
+- CSS
+- [Lucide React](https://lucide.dev/) for the bookmark icon
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Installation
+
+From this project directory:
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal, usually `http://localhost:5173`.
+
+### Create a production build
+
+```bash
+npm run build
+```
+
+### Preview the production build
+
+```bash
+npm run preview
+```
+
+### Run linting
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```text
+04-card-project/
+├── public/                 # Static public assets
+├── src/
+│   ├── assets/             # Images and other imported assets
+│   ├── components/
+│   │   └── Card.jsx        # Reusable job card component
+│   ├── App.jsx             # Job data and card list
+│   ├── App.css             # Optional app stylesheet
+│   ├── index.css           # Global and card layout styles
+│   └── main.jsx            # React entry point
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Customizing Listings
+
+The sample listings are defined in the `jobs` array in `src/App.jsx`. Add, remove, or update an object in that array to change the cards shown in the application.
+
+Each listing uses the following fields:
+
+```js
+{
+  brandLogo,
+  companyName,
+  postedDate,
+  post,
+  tag1,
+  tag2,
+  pay,
+  location
+}
+```
+
+## Notes
+
+- Logo images use remote URLs, so an internet connection may be required for them to load.
+- The current project does not include a backend, database, routing, or job application workflow.
